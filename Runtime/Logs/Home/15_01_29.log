@@ -846,3 +846,12 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000466s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.000537s ]
 
+[ 2015-01-29T21:31:13+08:00 ] ::1 /jdicms/Index-content-id-MDAwMDAwMDAwMIWCcqI-catid-MDAwMDAwMDAwMIWocqI.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003977s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005047s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000983s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001076s ]
+
