@@ -1,0 +1,51 @@
+<style type="text/css">
+    .m-main-z .form_z{
+        width: 450px;
+        float: left;
+    }
+
+    .m-main-z .pass-message{
+        width: 600px;
+        float: left;
+    }
+</style>
+<div class="m-main-z">
+    <div class="form_z">
+        <form method="post" action="{:addons_url('MessageBoard://MessageBoard/add')}" class="form-horizontal">
+            <div class="control-group">
+                <label class="control-label">昵称</label>
+                <div class="controls">
+                    <input type="text"  name="nickname" placeholder="您的称呼">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" f>联系方式</label>
+                <div class="controls">
+                    <input type="text"  name="link" placeholder="QQ,电话,邮箱">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" >留言内容</label>
+                <div class="controls">
+                    <textarea name="content" rows="3"></textarea>
+                </div>
+
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <button type="submit" class="btn btn-primary">提交</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="pass-message">
+        <volist name="list" id="vo">
+            昵称：{$vo.nickname}--留言内容{$vo.content}---留言时间{$vo.create_time|date='Y-m-d',###}<br />
+            <empty name="vo.reply">
+                <font color="red">管理员回复：{$vo.reply}</font>
+            </empty>
+            <br /><br />
+        </volist>
+    </div>
+</div>
